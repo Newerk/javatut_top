@@ -272,3 +272,51 @@ Comparing two onjects is ALWAYS false
 
 */
 
+/*
+Types of numbers:
+Integers - are floating point numbers without a fraction. they can either be positive or negative
+Floating points - numbers than have a decimal points and decimal places
+Doubles - are more accurate floating point numbers, they have greater precision ( more accurate to a greater number of decimal places)
+*/
+
+/*
+We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each column), but we also have things like:
+
+Binary — The lowest level language of computers; 0s and 1s.
+Octal — Base 8, uses 0–7 in each column.
+Hexadecimal — Base 16, uses 0–9 and then a–f in each column
+*/
+
+/*
+lert('1' + 2 + 2); // "122" and not "14"
+
+Here, the first operand is a string, the compiler treats the other two operands as strings too. The 2 gets concatenated 
+to '1', so it’s like '1' + 2 = "12" and "12" + 2 = "122".
+*/
+
+//you can convert strings into numbers by adding by prefixing it with a '+'. It has the same effect as using the function Number(...)
+//If you put a '+' infront of a negative number, it will NOT turn it positive. it has no effect
+
+// No effect on numbers
+let x = 1;
+alert( +x ); // 1
+
+let y = -2;
+alert( +y ); // -2
+
+// Converts non-numbers
+alert( +true ); // 1
+alert( +"" );   // 0
+
+
+
+//If we want to treat them as numbers, we need to convert and then sum them:
+
+let apples = "2";
+let oranges = "3";
+
+// both values converted to numbers before the binary plus
+alert( +apples + +oranges ); // 5
+
+// the longer variant
+// alert( Number(apples) + Number(oranges) ); // 5
