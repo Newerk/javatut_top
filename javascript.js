@@ -419,4 +419,139 @@ null: for unknown values
 undefined: for undefined values
 */
 
+/*
+slice(start, end)
+substring(start, end)
+substr(start, length)
+
+Note:
+JavaScript counts positions from zero.
+
+First position is 0.
+
+Second position is 1.
+*/
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(7, 13); //returns Banana
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(-12, -6);//returns Banana
+let part = str.slice(7); //returns Banana, Kiwi
+let part = str.slice(-12);//returns Banana, Kiwi
+
+let str = "Apple, Banana, Kiwi";
+let part = str.substring(7, 13);//returns Banana
+
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7, 6); //returns Banana
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7);//returns Banana, Kiwi
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(-4);//returns Kiwi
+
+/*
+The replace() method does not change the string it is called on.
+
+The replace() method returns a new string.
+
+The replace() method replaces only the first match
+*/
+let text = "Please visit Microsoft and Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+
+/*
+To replace all matches, use a regular expression with a /g flag (global match):
+*/
+let text = "Please visit Microsoft and Microsoft!";
+let newText = text.replace(/Microsoft/g, "W3Schools"); //returns 'Please visit W3Schools and W3Schools!'
+
+/*
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work
+
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+*/
+let text = "Please visit Microsoft!";
+let newText = text.replace(/MICROSOFT/i, "W3Schools"); //returns Please visit W3Schools
+
+/*
+Self explanatory: toUpperCase(): and toLowerCase()
+*/
+
+//concat() joins 2 strings or more strings together. This can be used instead of the '+' operator if you want
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2); //returns 'Hello World'
+
+//The trim() method removes whitespace from both sides of a string:
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();//returns 'Hello World!'
+
+//The padStart() method pads a string with another string
+let text = "5";
+let padded = text.padStart(4,"x");//returns 'xxx5'
+
+/*The padStart() and padEnd() method is a string method.
+
+To pad a number, convert the number to a string first.
+
+See the example below.
+*/
+
+let numb = 5;
+let text = numb.toString();
+let padded = text.padStart(4,"0");//returns 0005
+
+let numb = 5;
+let text = numb.toString();
+let padded = text.padEnd(4,"0");//returns 5000
+
+//The padEnd() method pads a string with another string:
+let text = "5";
+let padded = text.padEnd(4,"x");//return 5xxx
+
+let text = "5";
+let padded = text.padEnd(4,"0");//returns 5000
+
+/*
+There are 3 methods for extracting string characters:
+
+    charAt(position)
+    charCodeAt(position)
+    Property access [ ]
+*/
+
+//The charAt() method returns the character at a specified index (position) in a string:
+let text = 'HELLO WORLD';
+let char = text.charAt(0);//returns 'H'
+
+/*
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).
+*/
+let text = "HELLO WORLD";
+let char = text.charCodeAt(0);//returns '72'
+
+/*
+ECMAScript 5 (2009) allows property access [ ] on strings:
+Example */
+let text = "HELLO WORLD";
+let char = text[0];//returns 'H'
+/*
+Property access might be a little unpredictable:
+
+    It makes strings look like arrays (but they are not)
+    If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+    It is read only. str[0] = "A" gives no error (but does not work!)
+
+    let text = "HELLO WORLD";
+    text[0] = "A";    // Gives no error, but does not work
+*/
+
+
+//A string can be converted to an array with the split() method:
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|")    // Split on pipe
+
+//All string methods return a new value. They do NOT change the original variable
 
