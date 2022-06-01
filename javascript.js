@@ -320,3 +320,103 @@ alert( +apples + +oranges ); // 5
 
 // the longer variant
 // alert( Number(apples) + Number(oranges) ); // 5
+
+//---------------------------------------------------------------
+
+/*
+Javascript variables are not bound to data types. You can create a variable as a string, but then store a anumber
+Example:
+let message = "hello";
+message = 123456;
+*/
+
+/*
+NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+*/
+
+/*
+In javascrip, a number cannot represent a value larger than (253-1) [9007199254740991] or less than -(253-1) [-9007199254740991]
+This is a techincal limitation, BUT there may be cases where we need such large numbers. In this case, Javascript has
+something called 'BigInt'. It is an integer with an 'n' appended to the end of it.
+*/
+
+// the "n" at the end means it's a BigInt
+const bigInt = 1234567890123456789012345678901234567890n;
+
+/*
+In JavaScript, there are 3 types of quotes.
+
+    Double quotes: "Hello".
+    Single quotes: 'Hello'.
+    Backticks: `Hello`.
+
+Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
+
+Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}
+ for example:
+ */
+
+name = "John";
+
+// embed a variable
+alert( `Hello, ${name}!` ); // Hello, John!
+
+// embed an expression
+alert( `the result is ${1 + 2}` ); // the result is 3
+
+//In JavaScript, null simply means that a value represents "nothing", "empty", or "value unknown"
+let age = null; //state that the age is unknown
+alert(age); // shows "undefined"
+
+/*
+The 'object' type is special. All the other types are primative b/c they can only hold a single thing. Objects can hold
+a collection of data.
+*/
+
+//The typeof operator returns the type of the argument
+
+typeof undefined //returns "undefined"
+
+typeof 0 //returns "number"
+
+typeof 10n //returns "bigint"
+
+typeof true //returns "boolean"
+
+typeof "foo" //returns "string"
+
+typeof Symbol("id") //returns "symbol"
+
+typeof Math //returns "object"  (1)
+
+typeof null //returns "object"  (2)
+
+typeof alert //returns "function"  (3)
+
+/*
+The last three lines may need additional explanation:
+
+    1) Math is a built-in object that provides mathematical operations.
+    2) The result of typeof null is "object". That’s an officially recognized error in typeof, coming 
+    from very early days of JavaScript and kept for compatibility. Definitely, null is not an object. It is a 
+    special value with a separate type of its own. The behavior of typeof is wrong here.
+    3)The result of typeof alert is "function", because alert is a function. Functions belong to the object type. 
+    But typeof treats them differently, returning "function". That also comes from the early days of JavaScript. Technically, 
+    such behavior isn’t correct, but can be convenient in practice.
+*/
+
+/*
+THERE ARE 8 BASIC DATA TYPES IN JAVA:
+number: numbers of any kind
+bigint: arbitrary numbers
+string: for strings
+boolean: for true/false
+symbol: for unique identifiers
+object: for more complex data structures
+null: for unknown values
+undefined: for undefined values
+*/
+
+
