@@ -555,3 +555,78 @@ text.split("|")    // Split on pipe
 
 //All string methods return a new value. They do NOT change the original variable
 
+
+//Let’s compare null with a zero:
+
+alert( null > 0 );  // (1) false
+alert( null == 0 ); // (2) false
+alert( null >= 0 ); // (3) true
+
+
+
+//The value undefined shouldn’t be compared to other values:
+
+alert( undefined > 0 ); // false (1)
+alert( undefined < 0 ); // false (2)
+alert( undefined == 0 ); // false (3)
+/*
+We get these results because:
+
+    Comparisons (1) and (2) return false because undefined gets converted to NaN and NaN is a special 
+    numeric value which returns false for all comparisons. The equality check (3) returns false because 
+    undefined only equals null, undefined, and no other value.
+*/
+
+alert(undefined == null); //true
+
+//Strings are compared letter-by-letter in the “dictionary” order.
+alert( 'Z' > 'A' ); // true
+alert( 'Glow' > 'Glee' ); // true
+alert( 'Bee' > 'Be' ); // true
+/*
+case matters. A capital letter "A" is not equal to the lowercase "a". Which one is greater?
+The lowercase "a". Why? Because the lowercase character has a greater index in the internal 
+encoding table JavaScript uses (Unicode).
+*/
+
+THE IF STATEMENT
+/*if (condition) {
+  //  block of code to be executed if the condition is true
+} 
+*/
+
+/*
+alert( 1 || 0 ); // 1 (1 is truthy)
+
+alert( null || 1 ); // 1 (1 is the first truthy value)
+alert( null || 0 || 1 ); // 1 (the first truthy value)
+
+alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+*/
+
+
+//Logical Operators Exercise
+let userName = prompt("Enter User Name","");
+
+if(userName == "Admin"){
+    let pw = prompt("enter password", "");
+    if(pw == "TheMaster"){
+        alert("Welcome");
+    }else if(pw == "" || pw == null){
+        alert("Canceled");
+    }else{
+        alert("Wrong password");
+    }
+  } else if(userName == "" || null){
+    alert("Canceled");
+  } else{
+      alert("I dont know you")
+  }
+
+
+
+  if choice = jan, march, may, july, august, oct or december -> give the calandar 31(default) days 
+  if choice = april, june, sep, nov -> give the calandar 30 days 
+  else give calandar 28 days
+
+  let days = 31;

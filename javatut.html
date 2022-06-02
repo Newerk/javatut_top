@@ -25,12 +25,40 @@
         const max = 57;
         let actual = max - 13;
         let percentage = actual/max;
-        
-
 
     </script>
 
-    <script src="javascript.js"></script>
-    
+
+
+    <label for="choose">Select from the dropdown</label>
+    <select class="options">
+        <option value="">Make a Choice</option>
+        <option value="choice 1">Look</option>
+        <option value="choice 2">at</option>
+        <option value="choice 3">me</option>
+    </select>
+     <p></p>
+
+     <script>
+        const select = document.querySelector('select');
+const para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'choice 1') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'choice 2') {
+    para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+  } else if (choice === 'choice 3') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else {
+    para.textContent = '';
+  }
+}
+
+    </script>
 </body>
 </html>
