@@ -630,3 +630,61 @@ if(userName == "Admin"){
   else give calandar 28 days
 
   let days = 31;
+
+
+  if (age < 3) {
+    message = 'Hi, baby!';
+  } else if (age < 18) {
+    message = 'Hello!';
+  } else if (age < 100) {
+    message = 'Greetings!';
+  } else {
+    message = 'What an unusual age!';
+  }
+
+  //^^^Heres a faster way to write this block of code ^^^
+
+  let age = prompt("Age?", 18);
+
+  let messageOutput = (age < 3) ? 'Hi, baby' : (age < 18) ? 'Hello!' : 
+  (age < 100) ? 'Greetings!' : 'What and unusual age!';
+
+
+  let name = prompt("What is the “official” name of JavaScript?","");
+
+  let output = (name == "ECMASCript") ? "Right!" : "You don't know? ECMAScript!";
+
+  //or
+
+  if(name == "ECMAScript"){
+      alert("Right");
+  }else{
+      alert("You don't know? ECMAScript");
+  }
+
+
+  //--------------------------
+
+  let number = prompt("Enter a number",0);
+
+  if(number > 0){
+      alert(1);
+  }else if(number < 0){
+      alert(-1);
+  }else{
+      alert(0);
+  }
+
+
+  let result = (a+b<4)? 'Below': 'Over';
+
+
+  let message = (login == 'Employee') ? 'Hello':
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No Login': '';
+
+let day = new Date().getDay();
+
+
+//regular expressions:
+/ninja/
