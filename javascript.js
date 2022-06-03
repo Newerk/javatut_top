@@ -688,3 +688,6 @@ let day = new Date().getDay();
 
 //regular expressions:
 /ninja/
+
+let phoneNum = /[0-9]{11}/;
+34456678901
