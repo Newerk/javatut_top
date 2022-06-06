@@ -691,3 +691,13 @@ let day = new Date().getDay();
 
 let phoneNum = /[0-9]{11}/;
 34456678901
+
+
+//FUNCITONS VS METHODS
+//Functions that are a part of objects are called methods
+
+//Arrow functions:
+testBox.addEventListener('keydown', event =>{
+    console.log(`You pressed "${event.key}".`)
+});
+
