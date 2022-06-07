@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+      /*
         let a = 10;
         console.log(a);
         console.log(9*a);
@@ -25,10 +26,9 @@
         const max = 57;
         let actual = max - 13;
         let percentage = actual/max;
+        */
 
     </script>
-
-
 
     <label for="choose">Select from the dropdown</label>
     <select class="options">
@@ -39,7 +39,7 @@
     </select>
      <p></p>
 
-     <script>
+     <script>/*
         const select = document.querySelector('select');
 const para = document.querySelector('p');
 
@@ -58,6 +58,27 @@ function setWeather() {
     para.textContent = '';
   }
 }
+*/
+
+let answer = parseInt(prompt('Please enter the number you would like to FizzBuzz up to: '));
+
+let fizzbuzz = (num) => { 
+    for (let i = 1; i <= num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('FizzBuzz');
+        }else if (i % 3 === 0) {
+            console.log('Fizz');
+        } else if (i % 5 === 0) {
+            console.log('Buzz')
+        }else{
+            console.log(i);  
+        }
+        
+    }
+}
+
+console.log(fizzbuzz(answer));
+
 
     </script>
 </body>
