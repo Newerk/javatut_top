@@ -701,3 +701,24 @@ testBox.addEventListener('keydown', event =>{
     console.log(`You pressed "${event.key}".`)
 });
 
+//-------------------------------------------------
+
+//The Anatomy of an error
+/* An error is a type of object built into the javascript language
+
+The 3 parts of javacript errors are:
+fist part displays the type of error
+second part gives us the name of the file which you can find the error and the line number
+third part
+
+
+a Reference Error is thrown when one refers to a variable that is not declared or initialized
+
+A stack trace helps you understand when an error was thrown in your application, and what
+functions led up tp the error
+
+COMMON ERRORS YOU WILL RUN INTO:
+Syntax error: There is some error in the grammar of your code according the language rules.
+Reference Error: These arise b/c a variable you are trying to reference does not exist. (maybe you just incorrectly spelt a var)
+Type Error: Thrown when an operand or argument passed through a function doesnt match the type expected from that operator or function.
+Or trying to modify a value that cannot be changed, or attempting to use a value incorrectly
